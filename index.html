@@ -3,87 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IT Support Hub - Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d0d0d;
-      color: #00ffe1;
-      text-align: center;
-    }
-    .container {
-      padding: 40px;
-      max-width: 700px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-top: 50px;
-    }
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    #countdown {
-      font-size: 1.5rem;
-      margin-top: 20px;
-    }
-    .pricing-buttons {
-      margin-top: 40px;
-    }
-    .pricing-buttons button {
-      padding: 10px 20px;
-      background: #ccc;
-      border: none;
-      border-radius: 5px;
-      cursor: not-allowed;
-      margin: 0 10px;
-      font-size: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="refresh" content="0; url=login.html" />
+  <title>Redirecting to Login</title>
 </head>
 <body>
-  <div class="container">
-    <h1>🚧 IT Support Hub</h1>
-    <p>Our site is under construction. We'll be launching very soon!</p>
-    <p>Stay tuned at <strong>nilitsupport.top</strong></p>
-    <div id="countdown"></div>
-
-    <section>
-      <h2 style="margin-top: 60px;">Upgrade to Premium</h2>
-      <p>Get access to all lessons, practice tests, assignments, and certification.</p>
-      <div class="pricing-buttons">
-        <button disabled>Monthly Plan – Coming Soon</button>
-        <button disabled>Yearly Plan – Coming Soon</button>
-      </div>
-    </section>
-  </div>
-
-  <script>
-    const countdown = document.getElementById('countdown');
-    const launchDate = new Date("2025-04-25T00:00:00").getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `🚀 Launching in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-      if (distance < 0) {
-        clearInterval(x);
-        countdown.innerHTML = "🎉 We are live!";
-      }
-    };
-
-    const x = setInterval(updateCountdown, 1000);
-  </script>
+  <p>Redirecting to login...</p>
 </body>
 </html>
