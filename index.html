@@ -1,74 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IT Support Hub - Lessons</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    .lesson {
-      background: white;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-    }
-    .locked {
-      opacity: 0.5;
-      pointer-events: none;
-    }
-    .upgrade-message {
-      background: #fff3cd;
-      border: 1px solid #ffeeba;
-      color: #856404;
-      padding: 10px;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-    .upgrade-message a {
-      background: #007bff;
-      color: white;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription Options - IT Support Hub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to IT Support Hub</h1>
-  <div class="lesson" id="lesson1">📘 Lesson 1: Introduction to IT Support</div>
-  <div class="lesson" id="lesson2">📙 Lesson 2: Microsoft 365 Basics</div>
-  <div class="lesson" id="lockedLessons">
-    🔒 More lessons are locked. Upgrade to access!
-  </div>
-  <div class="upgrade-message" id="upgradePrompt" style="display: none;">
-    Your free access has expired. Please upgrade to continue learning.
-    <br/>
-    <a href="upgrade.html">Upgrade Now</a>
+  <div class="container">
+    <h1>Upgrade Your Access</h1>
+    <p>You have accessed the freemium lessons. Upgrade to unlock full content!</p>
+
+    <div class="plans">
+      <div class="plan">
+        <h2>3-Month Plan</h2>
+        <p>$19.99</p>
+        <button onclick="subscribe('3months')">Subscribe</button>
+      </div>
+      <div class="plan">
+        <h2>1-Year Plan</h2>
+        <p>$59.99</p>
+        <button onclick="subscribe('1year')">Subscribe</button>
+      </div>
+    </div>
+
+    <div id="status"></div>
   </div>
 
-  <script>
-    const registrationTime = localStorage.getItem("registeredAt");
-    if (!registrationTime) {
-      localStorage.setItem("registeredAt", new Date().toISOString());
-    } else {
-      const now = new Date();
-      const registeredDate = new Date(registrationTime);
-      const hoursPassed = (now - registeredDate) / 1000 / 60 / 60;
-      if (hoursPassed >= 24) {
-        document.getElementById("lesson1").classList.add("locked");
-        document.getElementById("lesson2").classList.add("locked");
-        document.getElementById("upgradePrompt").style.display = "block";
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
